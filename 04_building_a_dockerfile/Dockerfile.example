@@ -1,0 +1,11 @@
+FROM ruby:2.2.0
+MAINTAINER "Seth Moore"
+
+ADD ./blog /app
+WORKDIR /app
+RUN bundle
+# RUN apt-get update
+# RUN apt-get -y install npm
+EXPOSE 3000
+
+CMD ["rails", "s", "-b", "0.0.0.0"]
