@@ -21,6 +21,7 @@ Installing Docker on your system is quite easy
 
 Linux:
 >curl -sSL https://get.docker.com/ | sh
+
 OSX & Windows: Docker toolbox (requires tc-linux VM to emulate syscalls)
 >https://www.docker.com/docker-toolbox
 
