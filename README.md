@@ -19,11 +19,23 @@ security flaws, and multitenancy.
 # Installation
 Installing Docker on your system is quite easy
 
-Linux:
+## Linux: Native installation
 >curl -sSL https://get.docker.com/ | sh
 
-OSX & Windows: Docker toolbox (requires tc-linux VM to emulate syscalls)
+## OSX & Windows: Docker toolbox
 >https://www.docker.com/docker-toolbox
+
+**NOTE**: Windows and OSX do not directly support docker's system calls.
+Instead, they implement a wrapper script disguised as docker that calls the 
+actual docker daemon inside of a TinyCore Linux VM.
+
+When binding ports, you should be aware of this fact as daemons will not
+typically listen on the interface you expect. They will instead listen on
+the VirtualBox Host-only Adapter (typically vboxnet0).
+
+You can discover which interface Docker will be binding to by issuing the
+following command
+>docker-machine ip default
 
 
 # Walkthrough
