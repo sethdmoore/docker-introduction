@@ -3,6 +3,7 @@
 ## What is Docker?
 Docker is a container engine that is now part of the opencontainer spec. It
 provides the following benefits
+* process isolation
 * filesystem isolation
 * resource isolation
 * network isolation
