@@ -25,16 +25,19 @@ Installing Docker on your system is quite easy
 ## OSX & Windows: Docker toolbox
 >https://www.docker.com/docker-toolbox
 
-**NOTE**: Windows and OSX do not directly support docker's system calls.
-Instead, they implement a wrapper script disguised as docker that calls the 
-actual docker daemon inside of a TinyCore Linux VM.
+**NOTE**: Windows and OSX do not directly support the system calls docker 
+makes, as cgroups and jails are not implemented in the kernels of those
+operating systems. Instead, Docker-Toolbox installs a binary that calls
+the docker daemon inside of an extremely light TinyCore Linux VM.
 
 When binding ports, you should be aware of this fact as daemons will not
 typically listen on the interface you expect. They will instead listen on
 the VirtualBox Host-only Adapter (typically vboxnet0).
 
 You can discover which interface Docker will be binding to by issuing the
-following command
+following command (assuming you did not change the name of your docker vm
+from default).
+
 >docker-machine ip default
 
 
