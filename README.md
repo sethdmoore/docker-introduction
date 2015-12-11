@@ -10,12 +10,13 @@ provides the following benefits
 * rapid deployments
 * portability
 
+Docker can be the answer to "it worked on my machine", dependency hell,
+security flaws, and multitenancy.
+
+
 ## Limitations
 * orchestration is difficult
 * data persistence (databases, filesystem, etc)
-
-Docker can be the answer to "it worked on my machine", dependency hell,
-security flaws, and multitenancy.
 
 # Installation
 Installing Docker on your system is quite easy
