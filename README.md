@@ -62,7 +62,9 @@ Shows how easily services and software packaged as a Docker image can be
 installed, deployed and run.
 
 Configuration for applications is typically done through environment variables
-docker run -e FOO=bar
+
+>docker run -e FOO=bar someuser/someimage
+
 * graphite.sh
 * jenkins.sh
 * mysql.sh
