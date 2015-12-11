@@ -60,8 +60,12 @@ $ docker ps -a # list all containers (including stopped ones)
 ## 02_running_dockerhub_containers
 Shows how easily services and software packaged as a Docker image can be 
 installed, deployed and run.
+
+Configuration for applications is typically done through environment variables
+docker run -e FOO=bar
 * graphite.sh
 * jenkins.sh
+* mysql.sh
 
 ## 03_containers_as_commands
 Demonstrates how Docker containers can be run as executables
